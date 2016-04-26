@@ -21,30 +21,21 @@ namespace WS_NetMQ_PubAccount
         protected override void OnStart(string[] args)
         {
             string start = string.Format("{0}-{1}", DateTime.Now.ToString("yyyyMMddHHmmss"), "服务启动了");
-            Log(start);
+            LogHelper.Log(start);
 
         }
 
         protected override void OnStop()
         {
             string start = string.Format("{0}-{1}", DateTime.Now.ToString("yyyyMMddHHmmss"), "服务停止了");
-            Log(start);
+            LogHelper.Log(start);
         }
 
         protected override void OnShutdown()
         {
             string start = string.Format("{0}-{1}", DateTime.Now.ToString("yyyyMMddHHmmss"), "电脑关闭了");
-            Log(start);
+            LogHelper.Log(start);
         }
 
-        void Log(string str)
-        {
-
-            string path = "E:6.txt";
-            using (StreamWriter sw = File.AppendText(path))
-            {
-                sw.WriteLine(str);
-            }
-        }
     }
 }

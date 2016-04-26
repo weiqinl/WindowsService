@@ -39,9 +39,8 @@
             // 
             // serviceInstaller1
             // 
-            this.serviceInstaller1.DelayedAutoStart = true;
             this.serviceInstaller1.Description = "公众号推送消息，使用此服务";
-            this.serviceInstaller1.DisplayName = "公众号推送消息";
+            this.serviceInstaller1.DisplayName = "pubpushmessage";
             this.serviceInstaller1.ServiceName = "PubAccountService";
             this.serviceInstaller1.StartType = System.ServiceProcess.ServiceStartMode.Automatic;
             // 
