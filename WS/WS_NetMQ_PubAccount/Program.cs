@@ -14,6 +14,14 @@ namespace WS_NetMQ_PubAccount
         /// </summary>
         static void Main()
         {
+            Service1 s = new Service1();
+            if (Environment.UserInteractive)
+            {
+                s.DebugStart();
+                Console.ReadKey();
+                s.DebugStop();
+            }
+
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[] 
             { 
